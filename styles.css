@@ -1,3 +1,31 @@
+.container {
+ width: 100%;
+}
+
 div {
-  display: inline-block;
+  width: 20em;
+  height: 10em;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 4px solid black;
+  padding: 4px solid black;
+}
+
+#blue {
+  background-color: blue;
+}
+
+
+#red {
+  background-color: red;
+}
+
+#green {
+  background-color: green;
+}
+
+
+#yellow {
+  background-color: yellow;
 }
