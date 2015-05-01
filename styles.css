@@ -14,3 +14,22 @@ video {
   padding-right: 0;
   padding-left: 0;
 }
+
+.video_hidden {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+section article.video_popup {
+  align: center;
+  position: relative;
+  margin: 10% auto;
+  min-width: 400px;
+  max-width: 500px;
+}
+
+.close {
+  float: right;
+}
