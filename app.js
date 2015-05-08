@@ -22,7 +22,7 @@ $(document).ready(function() {
         .css({'background-color':'rgba(0,0,0,0.5)'})
         .appendTo('body');
         })
-        $('span.close').click(function() {
+        $('span.closing').click(function() {
           $('section.video_hidden').fadeOut();
           $("video").each(function(){
             $(this).get(0).play();
