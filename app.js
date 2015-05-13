@@ -34,7 +34,8 @@ function toggleFullScreen(element) {
 
 $(document).ready(function() {
   $('video').each(function() {
-    $(this).get(0).defaultMuted = true;
+    var vid = $(this).get(0)
+    vid.defaultMuted = true;
   });
 
     $('video').click(function(e) {
