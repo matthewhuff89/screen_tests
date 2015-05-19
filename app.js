@@ -31,7 +31,6 @@ function toggleFullScreen(element) {
         document.mozCancelFullScreen();
         element.muted = true;
       } else if (document.webkitExitFullscreen) {
-        console.log("exiting fullscreen like a boss!");
         document.webkitExitFullscreen();
         element.muted = true;
       }
@@ -39,7 +38,6 @@ function toggleFullScreen(element) {
 }
 
 function muteVideos() {
-  console.log("Muted everything!");
   var $target = $(event.target)
   $target[0].muted = true;
   $('video').each(function() {
