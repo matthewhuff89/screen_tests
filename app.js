@@ -1,10 +1,5 @@
-// Mess with switching "element" with document in this part...
-// A lot of refactoring needs to be done here.
-
-var notFullScreen = !document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement
-
 function toggleFullScreen(element) {
-  if(notFullScreen) {
+  if(!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
     if(!element.fullscreenElement && !element.mozFullScreenElement && !element.webkitFullscreenElement && !element.msFullscreenElement ) {
       if(element.requestFullscreen) {
         element.requestFullscreen();
