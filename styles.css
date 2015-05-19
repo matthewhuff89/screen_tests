@@ -1,7 +1,6 @@
 video {
-  min-width: 100%;
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 /* no-gutters Class Rules */
@@ -30,6 +29,10 @@ section article.video_popup {
   max-width: 500px;
 }
 
-.close {
+.closing {
   float: right;
+}
+
+span {
+  color:white;
 }
