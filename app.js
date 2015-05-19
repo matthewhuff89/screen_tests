@@ -45,6 +45,11 @@ function muteVideos() {
   });
 };
 
+$(window).load(function() {
+  $(".se-pre-con").fadeOut("slow");
+});
+
+
 $(document).ready(function() {
 
   // Upon the page being loaded, all of the videos are muted
