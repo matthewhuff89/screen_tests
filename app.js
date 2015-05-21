@@ -50,6 +50,7 @@ $(window).load(function() {
 });
 
 
+
 $(document).ready(function() {
 
   // Upon the page being loaded, all of the videos are muted
@@ -66,4 +67,3 @@ $(document).ready(function() {
       toggleFullScreen($target[0]);
   });
 });
-
