@@ -38,10 +38,8 @@ function toggleFullScreen(element) {
 }
 
 function muteVideos() {
-  var $target = $(event.target)
-  $target[0].muted = true;
   $('video').each(function() {
-    $(this).get(0).defaultMuted = true;
+    $(this).get(0).muted = true;
   });
 };
 
@@ -62,7 +60,7 @@ $(document).ready(function() {
     };
   });
   // On click, the targeted video is set to full screen mode. Depending on what type of browser is being used, a certain Fullscreen call is made. If the video is currently in fullscreen video, then on click, the Fullscreen mode will be cancelled and the targeted video will once again be muted.
-    $('video').click(function(e) {
+    $('video').click(function(event) {
       var $target = $(event.target)
       toggleFullScreen($target[0]);
   });
