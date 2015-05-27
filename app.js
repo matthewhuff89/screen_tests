@@ -37,9 +37,9 @@ function toggleFullScreen(element) {
     }
 }
 
-function muteVideos(event) {
-  var $target = $(event.target)
-  $target[0].muted = true;
+function muteVideos() {
+  // var $target = $(event.target)
+  // $target[0].muted = true;
   $('video').each(function() {
     $(this).get(0).defaultMuted = true;
   });
