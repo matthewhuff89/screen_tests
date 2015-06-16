@@ -44,7 +44,7 @@ function muteVideos() {
 };
 
 $(window).load(function() {
-  $(".se-pre-con").fadeOut("slow");
+  $("body").fadeIn("slow");
 });
 
 
