@@ -1,3 +1,4 @@
+// Method for toggling full screen mode on or off.
 function toggleFullScreen(element) {
   if(!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
     if(!element.fullscreenElement && !element.mozFullScreenElement && !element.webkitFullscreenElement && !element.msFullscreenElement ) {
@@ -37,6 +38,7 @@ function toggleFullScreen(element) {
     }
 }
 
+// Function for muting videos upon leaving Full Screen Mode or going to the page for the first time.
 function muteVideos() {
   $('video').each(function() {
     $(this).get(0).muted = true;
