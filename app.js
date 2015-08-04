@@ -38,6 +38,8 @@ function toggleFullScreen(element) {
     }
 }
 
+
+
 // Function for muting videos upon leaving Full Screen Mode or going to the page for the first time.
 function muteVideos() {
   $('video').each(function() {
