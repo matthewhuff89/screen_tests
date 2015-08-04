@@ -38,7 +38,16 @@ function toggleFullScreen(element) {
     }
 }
 
-
+// Function for playing the video associated with a GIF upon click
+function gifToVideo() {
+  $('img').click(function(event) {
+    var $imgtarget = $(event.target);
+    var mediaName = $imgtarget.attr('src').replace("gifs/", "").replace(".gif", "");
+    $('video').attr("src", "videos/" + mediaName + ".mp4");
+    toggleFullScreen($('video')[0]);
+    $('video')[0].play();
+  });
+};
 
 // Function for muting videos upon leaving Full Screen Mode or going to the page for the first time.
 function muteVideos() {
@@ -68,9 +77,6 @@ $(window).load(function() {
 $(document).ready(function() {
 
   // Upon the page being loaded, all of the videos are muted
- muteVideos();
- autoPlay();
-
   $(document).on('webkitfullscreenchange mozfullscreenchange fullscreenchange', function(){
     if(!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
       muteVideos();
@@ -83,9 +89,5 @@ $(document).ready(function() {
   //   var $video = $('video').get(0)
   //   toggleFullScreen($video);
   // });
-
-  $('video').click(function(event) {
-    var $target = $(event.target);
-    toggleFullScreen($target[0]);
-  })
+  gifToVideo();
 });
