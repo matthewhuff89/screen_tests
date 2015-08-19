@@ -41,8 +41,9 @@ function toggleFullScreen(element) {
 // Function for playing the video associated with a GIF upon click
 function gifToVideo() {
   $('img').click(function(event) {
-    var $imgtarget = $(event.target);
-    var mediaName = $imgtarget.attr('src').replace("gifs/", "").replace(".gif", "");
+    var $divtarget = $(event.target);
+    var mediaName = $divtarget.attr('name');
+    console.log(mediaName);
     $('video').attr("src", "videos/" + mediaName + ".mp4");
     toggleFullScreen($('video')[0]);
     $('video')[0].play();
@@ -53,12 +54,6 @@ function gifToVideo() {
 function muteVideos() {
   $('video').each(function() {
     $(this).get(0).muted = true;
-  });
-};
-
-function autoPlay() {
-  $('video').each(function() {
-    $(this).get(0).autoplay = true;
   });
 };
 
