@@ -44,7 +44,7 @@ function gifToVideo() {
     var $divtarget = $(event.target);
     var mediaName = $divtarget.attr('name');
     console.log(mediaName);
-    $('video').attr("src", "https://www.dropbox.com/s/10o5ix111hxvzjf/one_one.mp4?dl=1");
+    $('video').attr("src", "videos/" + mediaName + ".mp4");
     toggleFullScreen($('video')[0]);
     $('video')[0].play();
   });
