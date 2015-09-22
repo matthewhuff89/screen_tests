@@ -14,27 +14,29 @@ img {
 
 #screen {
   position: absolute;
-  z-index: 0;
+  z-index: 4;
 }
 
 #click_target {
   position: relative;
-  z-index: 3;
+  z-index: 5;
+  opacity: 0;
 }
 
 /* no-gutters Class Rules */
-.row.no-gutters {
+.row.no-gutters.inner-layer {
   margin-right: 0;
   margin-left: 0;
   margin-bottom: 0;
   margin-top: 0;
-  position: relative;
-  z-index: 1;
-  opacity: 0;
 }
 .row.no-gutters > [class^="col-"]{
   padding-right: 0;
   padding-left: 0;
   padding-top: 0;
   padding-bottom: 0;
+}
+
+.row.no-gutters.top-layer {
+
 }
